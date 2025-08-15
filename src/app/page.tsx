@@ -1,102 +1,221 @@
+import { FadeIn } from "@/components/Animated";
 import Image from "next/image";
+import MouseGlow from "@/components/MouseGlow";
+import GlowCard from "@/components/GlowCard";
+import HorizontalList from "@/components/HorizontalList";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen flex flex-col">
+      <MouseGlow />
+      <header className="w-full border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-baseline gap-2">
+            <span className="text-xl font-semibold tracking-tight">Celza</span>
+            <span className="text-sm text-black/60 dark:text-white/60">Build fast. Ship confidently.</span>
+          </div>
+          <nav className="hidden sm:flex items-center gap-6 text-sm">
+            <a href="#about" className="hover:underline underline-offset-4">
+              About
+            </a>
+            <a href="#services" className="hover:underline underline-offset-4">
+              Services
+            </a>
+            <a href="#projects" className="hover:underline underline-offset-4">
+              Projects
+            </a>
+            <a href="#team" className="hover:underline underline-offset-4">
+              Team
+            </a>
+            <a href="#contact" className="hover:underline underline-offset-4">
+              Contact
+            </a>
+          </nav>
         </div>
+      </header>
+
+      <main className="flex-1">
+        <section id="about" className="">
+          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-28">
+            <FadeIn>
+              <h1 className="display-hero font-semibold tracking-tight text-glow text-animated-gradient">
+                We design, build, and run modern software.
+              </h1>
+            </FadeIn>
+            <FadeIn delayMs={100}>
+              <p className="mt-5 text-base sm:text-lg text-black/70 dark:text-white/70 max-w-3xl">
+                Celza builds production‑grade web apps, cross‑platform mobile apps, reliable backend services, and
+                AI‑driven automation so your team can move faster with confidence.
+              </p>
+            </FadeIn>
+            <FadeIn delayMs={200}>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center h-11 px-5 rounded-md bg-foreground text-background text-sm font-medium hover:opacity-90 btn-glow"
+                >
+                  Get in touch
+                </a>
+                <a
+                  href="#services"
+                  className="inline-flex items-center justify-center h-11 px-5 rounded-md border border-black/[.08] dark:border-white/[.145] text-sm font-medium hover:bg-black/[.04] dark:hover:bg-white/[.08] backdrop-blur"
+                >
+                  Explore services
+                </a>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        <section id="services" className="border-t border-black/[.06] dark:border-white/[.08]">
+          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+            <FadeIn>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">What we do</h2>
+            </FadeIn>
+            <div className="mt-6 grid sm:grid-cols-2 gap-6">
+              <FadeIn>
+                <GlowCard className="rounded-lg card-glass p-5">
+                  <h3 className="font-medium">Web Applications</h3>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70">
+                    High‑performance, accessible web apps with modern stacks.
+                  </p>
+                </GlowCard>
+              </FadeIn>
+              <FadeIn delayMs={80}>
+                <GlowCard className="rounded-lg card-glass p-5">
+                  <h3 className="font-medium">Cross‑platform Mobile</h3>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70">
+                    iOS, Android, and desktop from a single codebase.
+                  </p>
+                </GlowCard>
+              </FadeIn>
+              <FadeIn delayMs={160}>
+                <GlowCard className="rounded-lg card-glass p-5">
+                  <h3 className="font-medium">Backend Services</h3>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70">
+                    Secure, scalable APIs, databases, observability, and ops.
+                  </p>
+                </GlowCard>
+              </FadeIn>
+              <FadeIn delayMs={240}>
+                <GlowCard className="rounded-lg card-glass p-5">
+                  <h3 className="font-medium">AI‑driven Automation</h3>
+                  <p className="mt-2 text-sm text-black/70 dark:text-white/70">
+                    Agentic workflows to eliminate toil and accelerate teams.
+                  </p>
+                </GlowCard>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className="border-t border-black/[.06] dark:border-white/[.08]">
+          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+            <FadeIn>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Selected work</h2>
+            </FadeIn>
+            <div className="mt-8">
+              <HorizontalList
+                items={[
+                  {
+                    title: "MySyde",
+                    subtitle: "Mobile Apps",
+                    description: "iOS and Android apps connecting local businesses and communities.",
+                    href: "https://mysyde.com/",
+                    imageSrc: "/mysyde-app-website.png",
+                    imageAlt: "MySyde mobile apps website preview",
+                  },
+                  {
+                    title: "Milkyway Epoxy",
+                    subtitle: "Website",
+                    description: "Brand‑forward site with lively animations and conversions in mind.",
+                    href: "https://milkywayepoxy.com/",
+                    imageSrc: "/milkwayepoxy-company-website.png",
+                    imageAlt: "Milkyway Epoxy company website preview",
+                  },
+                  {
+                    title: "Celal Zamanoglu",
+                    subtitle: "Portfolio",
+                    description: "Personal portfolio showcasing selected products, apps, and experiments.",
+                    href: "https://celalzamanoglu.dev/",
+                    imageSrc: "/celal-zamanoglu-portfolio.png",
+                    imageAlt: "Celal Zamanoglu portfolio preview",
+                  },
+                  {
+                    title: "GymmerAI",
+                    subtitle: "Web App",
+                    description: "AI‑powered gym companion for workouts and plans.",
+                    href: "https://gymmerai.vercel.app",
+                    imageSrc: "/gymmerai-web-app.png",
+                    imageAlt: "GymmerAI web app preview",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="team" className="border-t border-black/[.06] dark:border-white/[.08]">
+          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+            <FadeIn>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Team</h2>
+            </FadeIn>
+            <FadeIn delayMs={80}>
+              <div className="mt-6 grid sm:grid-cols-[auto_1fr] gap-4 items-start">
+                <div className="relative h-24 w-24 rounded-full overflow-hidden shadow-lg">
+                  <Image
+                    src="/celal-zamanoglu-profile-picture.jpeg"
+                    alt="Celal Zamanoglu"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <div>
+                  <div className="text-sm text-black/60 dark:text-white/60">Founder & CEO</div>
+                  <h3 className="text-lg font-medium">Celal Zamanoglu</h3>
+                  <p className="text-sm text-black/70 dark:text-white/70">Istanbul, Türkiye</p>
+                  <a className="text-sm underline underline-offset-4" href="mailto:contact@celalzamanoglu.dev">
+                    contact@celalzamanoglu.dev
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        <section id="contact" className="border-t border-black/[.06] dark:border-white/[.08]">
+          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+            <FadeIn>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
+            </FadeIn>
+            <FadeIn delayMs={80}>
+              <p className="mt-3 text-sm sm:text-base text-black/70 dark:text-white/70">
+                Email us at{" "}
+                <a className="underline underline-offset-4" href="mailto:hi@celza.tech">
+                  hi@celza.tech
+                </a>
+                .
+              </p>
+            </FadeIn>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t border-black/[.08] dark:border-white/[.145]">
+        <div className="max-w-5xl mx-auto px-6 py-10 text-sm flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center justify-between">
+          <p className="text-black/70 dark:text-white/70">
+            © {new Date().getFullYear()} Celza, Inc. All rights reserved.
+          </p>
+          <nav className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <a className="hover:underline underline-offset-4" href="mailto:hello@celza.tech">
+              Contact
+            </a>
+          </nav>
+        </div>
+        <div className="mx-auto my-6 flex items-center justify-center">
+          <div className="blurred-divider" />
+        </div>
       </footer>
     </div>
   );
