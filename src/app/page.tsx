@@ -15,9 +15,6 @@ export default function Home() {
             <span className="text-sm text-black/60 dark:text-white/60">Build fast. Ship confidently.</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
-            <a href="#about" className="hover:underline underline-offset-4">
-              About
-            </a>
             <a href="#services" className="hover:underline underline-offset-4">
               Services
             </a>
@@ -190,13 +187,16 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
             </FadeIn>
             <FadeIn delayMs={80}>
-              <p className="mt-3 text-sm sm:text-base text-black/70 dark:text-white/70">
-                Email us at{" "}
-                <a className="underline underline-offset-4" href="mailto:hi@celza.tech">
+              <p className="mt-3 text-sm sm:text-base text-black/70 dark:text-white/70 max-w-2xl">
+                We&apos;d love to hear about your project. Reach out and we&apos;ll reply within 24–48 hours.
+              </p>
+            </FadeIn>
+            <FadeIn delayMs={160}>
+              <div className="mt-8">
+                <a href="mailto:hi@celza.tech" className="text-lg underline underline-offset-4 hover:no-underline">
                   hi@celza.tech
                 </a>
-                .
-              </p>
+              </div>
             </FadeIn>
           </div>
         </section>
@@ -208,13 +208,16 @@ export default function Home() {
             © {new Date().getFullYear()} Celza, Inc. All rights reserved.
           </p>
           <nav className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <a className="hover:underline underline-offset-4" href="mailto:hello@celza.tech">
-              Contact
+            <a className="hover:underline underline-offset-4" href="#about">
+              About
+            </a>
+            <a className="hover:underline underline-offset-4" href="#projects">
+              Projects
+            </a>
+            <a className="hover:underline underline-offset-4" href="mailto:hi@celza.tech">
+              hi@celza.tech
             </a>
           </nav>
-        </div>
-        <div className="mx-auto my-6 flex items-center justify-center">
-          <div className="blurred-divider" />
         </div>
       </footer>
     </div>
