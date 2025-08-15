@@ -15,7 +15,7 @@ export default function MouseGlow() {
     window.addEventListener("pointermove", onMove, { passive: true });
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener("pointermove", onMove as any);
+      window.removeEventListener("pointermove", onMove);
     };
   }, []);
 
