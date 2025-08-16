@@ -12,7 +12,7 @@ type Item = {
   imageAlt?: string;
 };
 
-export default function HorizontalList({ items }: { items: Item[] }) {
+export const HorizontalList = ({ items }: { items: Item[] }) => {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
 
   const scrollByAmount = () => (scrollerRef.current?.clientWidth ?? 320) * 0.9;
@@ -74,4 +74,4 @@ export default function HorizontalList({ items }: { items: Item[] }) {
       </div>
     </div>
   );
-}
+};

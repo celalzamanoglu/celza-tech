@@ -6,7 +6,7 @@ type GlowCardProps = PropsWithChildren<{
   className?: string;
 }>;
 
-export default function GlowCard({ className = "", children }: GlowCardProps) {
+export const GlowCard = ({ className = "", children }: GlowCardProps) => {
   return (
     <div
       className={`glow-card ${className}`}
@@ -22,4 +22,4 @@ export default function GlowCard({ className = "", children }: GlowCardProps) {
       {children}
     </div>
   );
-}
+};

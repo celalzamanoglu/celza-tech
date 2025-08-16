@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function MouseGlow() {
+export const MouseGlow = () => {
   const [pos, setPos] = useState<{ x: number; y: number }>({ x: -9999, y: -9999 });
 
   useEffect(() => {
@@ -26,4 +26,4 @@ export default function MouseGlow() {
   `;
 
   return <div className="pointer-events-none fixed inset-0 -z-10" style={{ background }} aria-hidden />;
-}
+};

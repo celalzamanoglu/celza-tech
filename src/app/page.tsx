@@ -1,8 +1,6 @@
-import { FadeIn } from "@/components/Animated";
 import Image from "next/image";
-import MouseGlow from "@/components/MouseGlow";
-import GlowCard from "@/components/GlowCard";
-import HorizontalList from "@/components/HorizontalList";
+import { FadeIn, GlowCard, HorizontalList, MouseGlow } from "@/components";
+import { EmailIcon, LocationIcon, PhoneIcon } from "@/icons";
 
 export default function Home() {
   return (
@@ -10,7 +8,7 @@ export default function Home() {
       <MouseGlow />
       <header className="w-full border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-3">
             <span className="text-xl font-semibold tracking-tight">Celza</span>
             <span className="text-sm text-black/60 dark:text-white/60">Build fast. Ship confidently.</span>
           </div>
@@ -192,10 +190,26 @@ export default function Home() {
               </p>
             </FadeIn>
             <FadeIn delayMs={160}>
-              <div className="mt-8">
-                <a href="mailto:hi@celza.tech" className="text-lg underline underline-offset-4 hover:no-underline">
-                  hi@celza.tech
-                </a>
+              <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm text-black/70 dark:text-white/70">
+                <div className="flex items-start gap-3">
+                  <LocationIcon />
+                  <div>
+                    <div>1111B S Governors Ave STE 39417</div>
+                    <div>Dover, DE 19904</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <EmailIcon />
+                  <a href="mailto:hi@celza.tech" className="underline underline-offset-4 hover:no-underline">
+                    hi@celza.tech
+                  </a>
+                </div>
+                <div className="flex items-start gap-3">
+                  <PhoneIcon />
+                  <a href="tel:+13022445999" className="underline underline-offset-4 hover:no-underline">
+                    +1 302 244-5999
+                  </a>
+                </div>
               </div>
             </FadeIn>
           </div>

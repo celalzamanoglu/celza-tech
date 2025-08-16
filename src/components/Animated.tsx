@@ -8,7 +8,7 @@ type AnimatedProps = PropsWithChildren<{
   delayMs?: number;
 }>;
 
-export function FadeIn({ children, className = "", delayMs = 0 }: AnimatedProps) {
+export const FadeIn = ({ children, className = "", delayMs = 0 }: AnimatedProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,4 +43,4 @@ export function FadeIn({ children, className = "", delayMs = 0 }: AnimatedProps)
       {children}
     </div>
   );
-}
+};
