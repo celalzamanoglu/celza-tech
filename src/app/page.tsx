@@ -63,7 +63,7 @@ export default function Home() {
         </section>
 
         <section id="services" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">What we do</h2>
             </FadeIn>
@@ -105,7 +105,7 @@ export default function Home() {
         </section>
 
         <section id="projects" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Selected work</h2>
             </FadeIn>
@@ -151,7 +151,7 @@ export default function Home() {
         </section>
 
         <section id="team" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Team</h2>
             </FadeIn>
@@ -180,7 +180,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20">
+          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
             </FadeIn>
