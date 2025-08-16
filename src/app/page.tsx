@@ -292,7 +292,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-black/[.08] dark:border-white/[.145]">
+      <footer className="mt-16 sm:mt-20 border-t border-black/[.08] dark:border-white/[.145]">
         <div className="max-w-5xl mx-auto px-6 py-10 text-sm flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center justify-between">
           <p className="text-black/70 dark:text-white/70">
             © {new Date().getFullYear()} Celza, Inc. All rights reserved.
