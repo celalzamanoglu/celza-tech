@@ -190,15 +190,15 @@ export default function Home() {
               </p>
             </FadeIn>
             <FadeIn delayMs={160}>
-              <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm text-black/70 dark:text-white/70">
-                <div className="flex items-start gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 text-sm text-black/70 dark:text-white/70">
+                <div className="flex items-start gap-3 mr-22">
                   <LocationIcon />
                   <div>
                     <div>1111B S Governors Ave STE 39417</div>
                     <div>Dover, DE 19904</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 mr-22">
                   <EmailIcon />
                   <a href="mailto:hi@celza.tech" className="underline underline-offset-4 hover:no-underline">
                     hi@celza.tech
