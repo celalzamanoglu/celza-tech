@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Celza, Inc. – Web, Mobile, Backend & AI Automation",
   description:
     "Celza builds fast, modern web apps, cross‑platform mobile apps, reliable backends, and AI‑driven automation for startups and enterprises.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
