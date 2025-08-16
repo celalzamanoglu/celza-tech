@@ -1,15 +1,34 @@
 import Image from "next/image";
-import { FadeIn, GlowCard, HorizontalList, MouseGlow } from "@/components";
-import { EmailIcon, LocationIcon, PhoneIcon } from "@/icons";
+import { FadeIn, GlowCard, HorizontalList, MouseGlow, Marquee } from "@/components";
+import { HiOutlinePhone } from "react-icons/hi";
+import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 
 export default function Home() {
+  const marqueeItems = [
+    { label: "Vercel", icon: "vercel" as const, href: "https://vercel.com" },
+    { label: "Next.js", icon: "nextjs" as const, href: "https://nextjs.org" },
+    { label: "Supabase", icon: "supabase" as const, href: "https://supabase.com" },
+    { label: "Prisma", icon: "prisma" as const, href: "https://www.prisma.io" },
+    { label: "OpenAI", icon: "openai" as const, href: "https://openai.com" },
+    { label: "Google Cloud", icon: "googlecloud" as const, href: "https://cloud.google.com" },
+    { label: "Figma", icon: "figma" as const, href: "https://www.figma.com" },
+    { label: "React", icon: "react" as const, href: "https://react.dev" },
+    { label: "Meta", icon: "meta" as const, href: "https://about.meta.com" },
+    { label: "Laravel", icon: "laravel" as const, href: "https://laravel.com" },
+    { label: "Stripe", icon: "stripe" as const, href: "https://stripe.com" },
+    { label: "Docker", icon: "docker" as const, href: "https://www.docker.com" },
+    { label: "PostgreSQL", icon: "postgresql" as const, href: "https://www.postgresql.org" },
+    { label: "n8n", icon: "n8n" as const, href: "https://n8n.io" },
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <MouseGlow />
-      <header className="w-full border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="w-full h-16 border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-full">
           <div className="flex items-baseline gap-3">
-            <span className="text-xl font-semibold tracking-tight">Celza</span>
+            <a href="#about" aria-label="Home" className="text-xl font-semibold tracking-tight hover:opacity-80">
+              Celza
+            </a>
             <span className="text-sm text-black/60 dark:text-white/60">Build fast. Ship confidently.</span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
@@ -31,7 +50,7 @@ export default function Home() {
 
       <main className="flex-1">
         <section id="about" className="">
-          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-28">
+          <div className="max-w-5xl mx-auto px-6 min-h-[calc(100svh-4rem)] flex flex-col justify-center">
             <FadeIn>
               <h1 className="display-hero font-semibold tracking-tight text-glow text-animated-gradient">
                 We design, build, and run modern software.
@@ -39,8 +58,8 @@ export default function Home() {
             </FadeIn>
             <FadeIn delayMs={100}>
               <p className="mt-5 text-base sm:text-lg text-black/70 dark:text-white/70 max-w-3xl">
-                Celza builds production‑grade web apps, cross‑platform mobile apps, reliable backend services, and
-                AI‑driven automation so your team can move faster with confidence.
+                We build production‑grade web apps, cross‑platform mobile apps, reliable backend services, and AI‑driven
+                automation so your team can move faster with confidence.
               </p>
             </FadeIn>
             <FadeIn delayMs={200}>
@@ -62,8 +81,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
+        <section id="services" className="">
+          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">What we do</h2>
             </FadeIn>
@@ -104,8 +123,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
+        {/* Tech partners / tools marquee via react-icons */}
+        <Marquee items={marqueeItems} speed={70} />
+
+        <section id="projects" className="">
+          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Selected work</h2>
             </FadeIn>
@@ -150,8 +172,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="team" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
+        <section id="team" className="">
+          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Team</h2>
             </FadeIn>
@@ -179,8 +201,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="border-t border-black/[.06] dark:border-white/[.08]">
-          <div className="max-w-5xl mx-auto px-6 pt-12 pb-16 sm:pt-16 sm:pb-20">
+        <section id="contact" className="">
+          <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
             </FadeIn>
@@ -190,25 +212,25 @@ export default function Home() {
               </p>
             </FadeIn>
             <FadeIn delayMs={160}>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 text-sm text-black/70 dark:text-white/70">
-                <div className="flex items-start gap-3 mr-22">
-                  <LocationIcon />
-                  <div>
-                    <div>1111B S Governors Ave STE 39417</div>
-                    <div>Dover, DE 19904</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 mr-22">
-                  <EmailIcon />
+              <div className="mt-8 flex flex-col sm:flex-row justify-between gap-4 text-sm text-black/70 dark:text-white/70">
+                <div className="flex items-start gap-3">
+                  <HiOutlineEnvelope className="mt-0.5 h-5 w-5 text-black/60 dark:text-white/60" />
                   <a href="mailto:hi@celza.tech" className="underline underline-offset-4 hover:no-underline">
                     hi@celza.tech
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
-                  <PhoneIcon />
+                  <HiOutlinePhone className="mt-0.5 h-5 w-5 text-black/60 dark:text-white/60" />
                   <a href="tel:+13022445999" className="underline underline-offset-4 hover:no-underline">
                     +1 302 244-5999
                   </a>
+                </div>
+                <div className="flex items-start gap-3">
+                  <HiOutlineMapPin className="mt-0.5 h-5 w-5 text-black/60 dark:text-white/60" />
+                  <div>
+                    <div>1111B S Governors Ave STE 39417</div>
+                    <div>Dover, DE 19904</div>
+                  </div>
                 </div>
               </div>
             </FadeIn>
