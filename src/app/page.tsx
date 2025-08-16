@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn, GlowCard, HorizontalList, MouseGlow, Marquee } from "@/components";
+import { FadeIn, GlowCard, HorizontalList, Marquee } from "@/components";
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 
@@ -22,7 +22,6 @@ export default function Home() {
   ];
   return (
     <div className="min-h-screen flex flex-col">
-      <MouseGlow />
       <header className="w-full h-16 border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-full">
           <div className="flex items-baseline gap-3">
