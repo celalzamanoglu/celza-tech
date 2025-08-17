@@ -4,7 +4,7 @@ import {
   GlowCard,
   HorizontalList,
   Marquee,
-  RotatingText,
+  HeroHeadlineText,
 } from "@/components";
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
@@ -80,20 +80,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-6 min-h-[calc(100svh-4rem)] flex flex-col justify-center">
             <FadeIn>
               <h1 className="display-hero font-semibold tracking-tight">
-                We design, build, and run modern{" "}
-                <RotatingText
-                  texts={["apps", "websites", "software", "projects"]}
-                  mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-                  staggerFrom={"last"}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
-                  staggerDuration={0.025}
-                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={2000}
-                />
-                .
+                <HeroHeadlineText />
               </h1>
             </FadeIn>
             <FadeIn delayMs={100}>
