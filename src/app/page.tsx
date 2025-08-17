@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { FadeIn, GlowCard, HorizontalList, Marquee } from "@/components";
+import {
+  FadeIn,
+  GlowCard,
+  HorizontalList,
+  Marquee,
+  RotatingText,
+} from "@/components";
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 
@@ -7,17 +13,33 @@ export default function Home() {
   const marqueeItems = [
     { label: "Vercel", icon: "vercel" as const, href: "https://vercel.com" },
     { label: "Next.js", icon: "nextjs" as const, href: "https://nextjs.org" },
-    { label: "Supabase", icon: "supabase" as const, href: "https://supabase.com" },
+    {
+      label: "Supabase",
+      icon: "supabase" as const,
+      href: "https://supabase.com",
+    },
     { label: "Prisma", icon: "prisma" as const, href: "https://www.prisma.io" },
     { label: "OpenAI", icon: "openai" as const, href: "https://openai.com" },
-    { label: "Google Cloud", icon: "googlecloud" as const, href: "https://cloud.google.com" },
+    {
+      label: "Google Cloud",
+      icon: "googlecloud" as const,
+      href: "https://cloud.google.com",
+    },
     { label: "Figma", icon: "figma" as const, href: "https://www.figma.com" },
     { label: "React", icon: "react" as const, href: "https://react.dev" },
     { label: "Meta", icon: "meta" as const, href: "https://about.meta.com" },
     { label: "Laravel", icon: "laravel" as const, href: "https://laravel.com" },
     { label: "Stripe", icon: "stripe" as const, href: "https://stripe.com" },
-    { label: "Docker", icon: "docker" as const, href: "https://www.docker.com" },
-    { label: "PostgreSQL", icon: "postgresql" as const, href: "https://www.postgresql.org" },
+    {
+      label: "Docker",
+      icon: "docker" as const,
+      href: "https://www.docker.com",
+    },
+    {
+      label: "PostgreSQL",
+      icon: "postgresql" as const,
+      href: "https://www.postgresql.org",
+    },
     { label: "n8n", icon: "n8n" as const, href: "https://n8n.io" },
   ];
   return (
@@ -25,10 +47,16 @@ export default function Home() {
       <header className="w-full h-16 border-b border-black/[.08] dark:border-white/[.145] bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-full">
           <div className="flex items-baseline gap-3">
-            <a href="#about" aria-label="Home" className="text-xl font-semibold tracking-tight hover:opacity-80">
+            <a
+              href="#about"
+              aria-label="Home"
+              className="text-xl font-semibold tracking-tight hover:opacity-80"
+            >
               Celza
             </a>
-            <span className="text-sm text-black/60 dark:text-white/60">Build fast. Ship confidently.</span>
+            <span className="text-sm text-black/60 dark:text-white/60">
+              Infinite possibilites. Perfectly build.
+            </span>
           </div>
           <nav className="hidden sm:flex items-center gap-6 text-sm">
             <a href="#services" className="hover:underline underline-offset-4">
@@ -51,14 +79,28 @@ export default function Home() {
         <section id="about" className="">
           <div className="max-w-5xl mx-auto px-6 min-h-[calc(100svh-4rem)] flex flex-col justify-center">
             <FadeIn>
-              <h1 className="display-hero font-semibold tracking-tight text-glow text-animated-gradient">
-                We design, build, and run modern software.
+              <h1 className="display-hero font-semibold tracking-tight">
+                We design, build, and run modern{" "}
+                <RotatingText
+                  texts={["apps", "websites", "software", "projects"]}
+                  mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
+                .
               </h1>
             </FadeIn>
             <FadeIn delayMs={100}>
               <p className="mt-5 text-base sm:text-lg text-black/70 dark:text-white/70 max-w-3xl">
-                We build production‑grade web apps, cross‑platform mobile apps, reliable backend services, and AI‑driven
-                automation so your team can move faster with confidence.
+                We build production‑grade web apps, cross‑platform mobile apps,
+                reliable backend services, and AI‑driven automation so your team
+                can move faster with confidence.
               </p>
             </FadeIn>
             <FadeIn delayMs={200}>
@@ -83,7 +125,9 @@ export default function Home() {
         <section id="services" className="">
           <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">What we do</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+                What we do
+              </h2>
             </FadeIn>
             <div className="mt-6 grid sm:grid-cols-2 gap-6">
               <FadeIn>
@@ -128,7 +172,9 @@ export default function Home() {
         <section id="projects" className="">
           <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Selected work</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+                Selected work
+              </h2>
             </FadeIn>
             <div className="mt-8">
               <HorizontalList
@@ -136,7 +182,8 @@ export default function Home() {
                   {
                     title: "MySyde",
                     subtitle: "Mobile Apps",
-                    description: "iOS and Android apps connecting local businesses and communities.",
+                    description:
+                      "iOS and Android apps connecting local businesses and communities.",
                     href: "https://mysyde.com/",
                     imageSrc: "/mysyde-app-website.png",
                     imageAlt: "MySyde mobile apps website preview",
@@ -144,7 +191,8 @@ export default function Home() {
                   {
                     title: "Milkyway Epoxy",
                     subtitle: "Website",
-                    description: "Brand‑forward site with lively animations and conversions in mind.",
+                    description:
+                      "Brand‑forward site with lively animations and conversions in mind.",
                     href: "https://milkywayepoxy.com/",
                     imageSrc: "/milkwayepoxy-company-website.png",
                     imageAlt: "Milkyway Epoxy company website preview",
@@ -152,7 +200,8 @@ export default function Home() {
                   {
                     title: "Celal Zamanoglu",
                     subtitle: "Portfolio",
-                    description: "Personal portfolio showcasing selected products, apps, and experiments.",
+                    description:
+                      "Personal portfolio showcasing selected products, apps, and experiments.",
                     href: "https://celalzamanoglu.dev/",
                     imageSrc: "/celal-zamanoglu-portfolio.png",
                     imageAlt: "Celal Zamanoglu portfolio preview",
@@ -160,7 +209,8 @@ export default function Home() {
                   {
                     title: "GymmerAI",
                     subtitle: "Web App",
-                    description: "AI‑powered gym companion for workouts and plans.",
+                    description:
+                      "AI‑powered gym companion for workouts and plans.",
                     href: "https://gymmerai.vercel.app",
                     imageSrc: "/gymmerai-web-app.png",
                     imageAlt: "GymmerAI web app preview",
@@ -174,7 +224,9 @@ export default function Home() {
         <section id="team" className="">
           <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Team</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+                Team
+              </h2>
             </FadeIn>
             <FadeIn delayMs={80}>
               <div className="mt-6 grid sm:grid-cols-[auto_1fr] gap-4 items-start">
@@ -188,10 +240,17 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <div className="text-sm text-black/60 dark:text-white/60">Founder & CEO</div>
+                  <div className="text-sm text-black/60 dark:text-white/60">
+                    Founder & CEO
+                  </div>
                   <h3 className="text-lg font-medium">Celal Zamanoglu</h3>
-                  <p className="text-sm text-black/70 dark:text-white/70">Istanbul, Türkiye</p>
-                  <a className="text-sm underline underline-offset-4" href="mailto:contact@celalzamanoglu.dev">
+                  <p className="text-sm text-black/70 dark:text-white/70">
+                    Istanbul, Türkiye
+                  </p>
+                  <a
+                    className="text-sm underline underline-offset-4"
+                    href="mailto:contact@celalzamanoglu.dev"
+                  >
                     contact@celalzamanoglu.dev
                   </a>
                 </div>
@@ -203,24 +262,33 @@ export default function Home() {
         <section id="contact" className="">
           <div className="max-w-5xl mx-auto px-6 py-16 sm:py-20">
             <FadeIn>
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Contact</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+                Contact
+              </h2>
             </FadeIn>
             <FadeIn delayMs={80}>
               <p className="mt-3 text-sm sm:text-base text-black/70 dark:text-white/70 max-w-2xl">
-                We&apos;d love to hear about your project. Reach out and we&apos;ll reply within 24–48 hours.
+                We&apos;d love to hear about your project. Reach out and
+                we&apos;ll reply within 24–48 hours.
               </p>
             </FadeIn>
             <FadeIn delayMs={160}>
               <div className="mt-8 flex flex-col sm:flex-row justify-between gap-4 text-sm text-black/70 dark:text-white/70">
                 <div className="flex items-start gap-3">
                   <HiOutlineEnvelope className="mt-0.5 h-5 w-5 text-black/60 dark:text-white/60" />
-                  <a href="mailto:hi@celza.tech" className="underline underline-offset-4 hover:no-underline">
+                  <a
+                    href="mailto:hi@celza.tech"
+                    className="underline underline-offset-4 hover:no-underline"
+                  >
                     hi@celza.tech
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <HiOutlinePhone className="mt-0.5 h-5 w-5 text-black/60 dark:text-white/60" />
-                  <a href="tel:+13022445999" className="underline underline-offset-4 hover:no-underline">
+                  <a
+                    href="tel:+13022445999"
+                    className="underline underline-offset-4 hover:no-underline"
+                  >
                     +1 302 244-5999
                   </a>
                 </div>
@@ -249,7 +317,10 @@ export default function Home() {
             <a className="hover:underline underline-offset-4" href="#projects">
               Projects
             </a>
-            <a className="hover:underline underline-offset-4" href="mailto:hi@celza.tech">
+            <a
+              className="hover:underline underline-offset-4"
+              href="mailto:hi@celza.tech"
+            >
               hi@celza.tech
             </a>
           </nav>
