@@ -77,7 +77,7 @@ export default function Home() {
 
       <main className="flex-1">
         <section id="about" className="">
-          <div className="max-w-5xl mx-auto px-6 min-h-[calc(100svh-4rem)] flex flex-col justify-center">
+          <div className="max-w-5xl mx-auto px-6 min-h-[calc(100svh-4rem)] flex flex-col justify-center -translate-y-2 sm:-translate-y-4 md:-translate-y-6">
             <FadeIn>
               <h1 className="display-hero font-semibold tracking-tight">
                 <HeroHeadlineText />
