@@ -6,3 +6,4 @@ export { default as RotatingText } from "./RotatingText";
 export { default as HeroHeadlineText } from "./HeroHeadlineText";
 export * from "./Marquee";
 export { default as LanguageSwitcher } from "./LanguageSwitcher";
+export { default as MobileMenu } from "./MobileMenu";

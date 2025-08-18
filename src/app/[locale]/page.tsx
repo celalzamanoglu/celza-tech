@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { FadeIn, GlowCard, HorizontalList, Marquee, HeroHeadlineText, LanguageSwitcher } from "@/components";
+import {
+  FadeIn,
+  GlowCard,
+  HorizontalList,
+  Marquee,
+  HeroHeadlineText,
+  LanguageSwitcher,
+  MobileMenu,
+} from "@/components";
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -67,6 +75,17 @@ export default async function Home({ params }: { params: { locale: string } }) {
             </a>
             <LanguageSwitcher currentLocale={locale} />
           </nav>
+          <div className="sm:hidden">
+            <MobileMenu
+              currentLocale={locale}
+              items={[
+                { href: "#services", label: t.header.nav.services },
+                { href: "#projects", label: t.header.nav.projects },
+                { href: "#team", label: t.header.nav.team },
+                { href: "#contact", label: t.header.nav.contact },
+              ]}
+            />
+          </div>
         </div>
       </header>
 
