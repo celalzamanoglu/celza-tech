@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn, GlowCard, HorizontalList, Marquee, HeroHeadlineText } from "@/components";
+import { FadeIn, GlowCard, HorizontalList, Marquee, HeroHeadlineText, LanguageSwitcher } from "@/components";
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -65,6 +65,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
             <a href="#contact" className="hover:underline underline-offset-4">
               {t.header.nav.contact}
             </a>
+            <LanguageSwitcher currentLocale={locale} />
           </nav>
         </div>
       </header>
