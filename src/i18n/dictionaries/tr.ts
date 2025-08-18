@@ -2,7 +2,7 @@ export const dictionary = {
   header: {
     tagline: "Sonsuz olasılıklar. Kusursuzca inşa edilir.",
     nav: {
-      services: "Hizmetler",
+      services: "Servisler",
       projects: "Projeler",
       team: "Ekip",
       contact: "İletişim",
@@ -21,19 +21,19 @@ export const dictionary = {
     items: [
       {
         title: "Web Uygulamaları",
-        description: "Modern yığınlarla yüksek performanslı ve erişilebilir web uygulamaları.",
+        description: "Yüksek performanslı ve modern web uygulamaları.",
       },
       {
-        title: "Çapraz Platform Mobil",
-        description: "Tek kod tabanından iOS, Android ve masaüstü.",
+        title: "Cross-Platform Mobil Uygulamalar",
+        description: "Tek kod tabanından iOS, Android ve masaüstü uygulamaları. ",
       },
       {
-        title: "Arka Uç Servisleri",
-        description: "Güvenli, ölçeklenebilir API'ler, veritabanları, gözlemlenebilirlik ve operasyonlar.",
+        title: "Backend Servisleri",
+        description: "Güvenli, ölçeklenebilir API'ler, veritabanları, mikroservisler ve fazlası.",
       },
       {
         title: "Yapay Zekâ Tabanlı Otomasyon",
-        description: "Angaryayı ortadan kaldıran ve ekipleri hızlandıran ajan tabanlı iş akışları.",
+        description: "Operasyonlarınızı hızlandıran ajan tabanlı otomasyonlar.",
       },
     ],
   },
