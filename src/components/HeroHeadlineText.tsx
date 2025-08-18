@@ -32,7 +32,12 @@ export default function HeroHeadlineText({ prefix, words }: HeroHeadlineTextProp
             transition={sharedTransition}
             rotationInterval={2000}
           />
-          <motion.span layout aria-hidden="true" className="absolute left-full pl-2" transition={sharedTransition}>
+          <motion.span
+            layout
+            aria-hidden="true"
+            className="inline-block align-baseline -ml-2 sm:-ml-2 md:-ml-3"
+            transition={sharedTransition}
+          >
             .
           </motion.span>
         </motion.span>
