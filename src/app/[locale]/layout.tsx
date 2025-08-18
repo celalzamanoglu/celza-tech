@@ -24,7 +24,7 @@ export default async function LocaleLayout({
 }
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "tr" }, { locale: "de" }, { locale: "es" }];
+  return [{ locale: "en" }, { locale: "tr" }, { locale: "de" }, { locale: "es" }, { locale: "ru" }];
 }
 
 export const dynamicParams = false;
