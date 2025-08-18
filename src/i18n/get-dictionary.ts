@@ -1,6 +1,6 @@
 import type { Locale } from "./config";
 import type { Dictionary } from "./types";
-import { en, tr, de, es, ru, zh, fr } from "./dictionaries";
+import { en, tr, de, es, ru, zh, fr, pl } from "./dictionaries";
 
 const dictionaries: Record<Locale, Dictionary> = {
   en: en as Dictionary,
@@ -10,6 +10,7 @@ const dictionaries: Record<Locale, Dictionary> = {
   ru: ru as Dictionary,
   zh: zh as Dictionary,
   fr: fr as Dictionary,
+  pl: pl as Dictionary,
 };
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {

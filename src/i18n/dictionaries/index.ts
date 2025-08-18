@@ -5,3 +5,4 @@ export { dictionary as es } from "./es";
 export { dictionary as ru } from "./ru";
 export { dictionary as zh } from "./zh";
 export { dictionary as fr } from "./fr";
+export { dictionary as pl } from "./pl";

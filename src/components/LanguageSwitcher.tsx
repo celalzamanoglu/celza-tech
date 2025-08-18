@@ -18,6 +18,7 @@ const LOCALE_LABELS: Record<Locale, string> = {
   ru: "Русский",
   zh: "简体中文",
   fr: "Français",
+  pl: "Polski",
 };
 
 const LOCALE_FLAGS: Record<Locale, string> = {
@@ -28,6 +29,7 @@ const LOCALE_FLAGS: Record<Locale, string> = {
   ru: "🇷🇺",
   zh: "🇨🇳",
   fr: "🇫🇷",
+  pl: "🇵🇱",
 };
 
 export default function LanguageSwitcher({ currentLocale, className = "" }: LanguageSwitcherProps) {

@@ -32,6 +32,7 @@ export function generateStaticParams() {
     { locale: "ru" },
     { locale: "zh" },
     { locale: "fr" },
+    { locale: "pl" },
   ];
 }
 
