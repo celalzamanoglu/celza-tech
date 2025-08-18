@@ -32,6 +32,9 @@ const LOCALE_FLAGS: Record<Locale, string> = {
   pl: "🇵🇱",
 };
 
+// Desired display order: en, tr, pl, ru, es, fr, de, zh
+const MENU_ORDER: Locale[] = ["en", "tr", "pl", "ru", "es", "fr", "de", "zh"];
+
 export default function LanguageSwitcher({ currentLocale, className = "" }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -89,7 +92,7 @@ export default function LanguageSwitcher({ currentLocale, className = "" }: Lang
           className="absolute right-0 mt-2 w-44 rounded-md border border-black/[.08] dark:border-white/[.145] bg-background/90 backdrop-blur shadow-lg z-50"
         >
           <ul className="py-1 px-1">
-            {locales.map((loc) => (
+            {MENU_ORDER.map((loc) => (
               <li key={loc}>
                 <button
                   type="button"
