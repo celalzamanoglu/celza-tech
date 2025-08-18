@@ -11,11 +11,13 @@ import {
 import { HiOutlinePhone } from "react-icons/hi";
 import { HiOutlineEnvelope, HiOutlineMapPin } from "react-icons/hi2";
 import { getDictionary } from "@/i18n/get-dictionary";
+import type { Dictionary } from "@/i18n/types";
 import { isSupportedLocale, type Locale } from "@/i18n/config";
 
-export default async function Home({ params }: { params: { locale: string } }) {
-  const locale = isSupportedLocale(params.locale) ? (params.locale as Locale) : "en";
-  const t = await getDictionary(locale);
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: rawLocale } = await params;
+  const locale = isSupportedLocale(rawLocale) ? (rawLocale as Locale) : "en";
+  const t: Dictionary = await getDictionary(locale);
 
   const marqueeItems = [
     { label: "Vercel", icon: "vercel" as const, href: "https://vercel.com" },

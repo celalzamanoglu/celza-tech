@@ -14,12 +14,14 @@ const LOCALE_LABELS: Record<Locale, string> = {
   en: "English",
   tr: "Türkçe",
   de: "Deutsch",
+  es: "Español",
 };
 
 const LOCALE_FLAGS: Record<Locale, string> = {
   en: "🇺🇸",
   tr: "🇹🇷",
   de: "🇩🇪",
+  es: "🇪🇸",
 };
 
 export default function LanguageSwitcher({ currentLocale, className = "" }: LanguageSwitcherProps) {

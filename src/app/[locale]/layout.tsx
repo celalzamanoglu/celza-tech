@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { isSupportedLocale, type Locale } from "@/i18n/config";
+import { isSupportedLocale } from "@/i18n/config";
 
 export const metadata: Metadata = {
   title: {
@@ -8,20 +8,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
-  // Validate the locale param to avoid unexpected values
-  const _locale = isSupportedLocale(params.locale) ? (params.locale as Locale) : "en";
+  const { locale } = await params;
+  // Validate the locale param to avoid unexpected values (no-op for now)
+  if (!isSupportedLocale(locale)) {
+    // fallback handled by middleware; keep component pure
+  }
   return children;
 }
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "tr" }, { locale: "de" }];
+  return [{ locale: "en" }, { locale: "tr" }, { locale: "de" }, { locale: "es" }];
 }
 
 export const dynamicParams = false;
