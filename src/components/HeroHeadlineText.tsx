@@ -22,7 +22,7 @@ export default function HeroHeadlineText({ prefix, words }: HeroHeadlineTextProp
         <motion.span layout className="relative inline-block" transition={sharedTransition}>
           <RotatingText
             texts={[...words]}
-            mainClassName="px-2 sm:px-2 md:px-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+            mainClassName="px-2 sm:px-2 md:px-3 -ml-2 sm:-ml-2 md:-ml-3 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
             staggerFrom="last"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
