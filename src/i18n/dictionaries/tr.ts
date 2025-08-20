@@ -9,10 +9,10 @@ export const dictionary = {
     },
   },
   hero: {
-    headlinePrefix: "Modern ",
-    words: ["uygulamalar", "web siteleri", "programlar", "arayüzler"],
+    headlinePrefix: "Kreatif, kaliteli ve güvenilir ",
+    words: ["uygulamalar", "web siteleri", "otomasyonlar"],
     paragraph:
-      "Üretim düzeyinde web uygulamaları, çapraz platform mobil uygulamalar, güvenilir arka uç servisleri ve yapay zekâ destekli otomasyonlar geliştiriyoruz; ekibinizin güvenle daha hızlı ilerlemesini sağlıyoruz.",
+      "En yeni teknolojileri kullanarak, web uygulamaları, cross-platform mobil uygulamalar, güvenilir backend servisleri ve yapay zekâ destekli otomasyonlar geliştiriyoruz; ekibinizin güvenle daha hızlı ilerlemesini sağlıyoruz.",
     ctaPrimary: "İletişime geç",
     ctaSecondary: "Hizmetleri keşfet",
   },

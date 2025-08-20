@@ -9,8 +9,8 @@ export const dictionary = {
     },
   },
   hero: {
-    headlinePrefix: "我们为您设计、构建并运营现代化的",
-    words: ["应用", "网站", "服务", "智能体"],
+    headlinePrefix: "创意、高质量、可靠的",
+    words: ["应用", "网站", "自动化"],
     paragraph:
       "我们打造生产级别的 Web 应用、跨平台移动应用、可靠的后端服务，以及基于 AI 的自动化，助力您的团队更快更稳地前进。",
     ctaPrimary: "联系我们",

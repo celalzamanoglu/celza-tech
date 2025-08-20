@@ -9,8 +9,8 @@ export const dictionary = {
     },
   },
   hero: {
-    headlinePrefix: "We design, build, and run modern ",
-    words: ["apps", "websites", "services", "agents"],
+    headlinePrefix: "Creative, high quality, and reliable ",
+    words: ["apps", "websites", "automations"],
     paragraph:
       "We build production‑grade web apps, cross‑platform mobile apps, reliable backend services, and AI‑driven automation so your team can move faster with confidence.",
     ctaPrimary: "Get in touch",
@@ -24,7 +24,7 @@ export const dictionary = {
         description: "High‑performance, accessible web apps with modern stacks.",
       },
       {
-        title: "Cross‑platform Mobile",
+        title: "Cross‑platform Mobile Apps",
         description: "iOS, Android, and desktop from a single codebase.",
       },
       {

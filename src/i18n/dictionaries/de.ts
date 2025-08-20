@@ -9,8 +9,8 @@ export const dictionary = {
     },
   },
   hero: {
-    headlinePrefix: "Wir entwerfen, entwickeln und betreiben moderne ",
-    words: ["Apps", "Websites", "Services", "Agenten"],
+    headlinePrefix: "Kreativ, qualitativ hochwertig und zuverlässig ",
+    words: ["Apps", "Websites", "Automatisierungen"],
     paragraph:
       "Wir bauen produktionsreife Web‑Apps, plattformübergreifende Mobile‑Apps, zuverlässige Backends und KI‑gestützte Automatisierung, damit Ihr Team schneller und sicherer vorankommt.",
     ctaPrimary: "Kontakt aufnehmen",
