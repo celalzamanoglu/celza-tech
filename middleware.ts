@@ -14,6 +14,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Allow /voca/* (e.g. privacy policy) without locale prefix
+  if (pathname.startsWith("/voca")) {
+    return NextResponse.next();
+  }
+
   if (!hasLocale(pathname)) {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}${pathname}`;
