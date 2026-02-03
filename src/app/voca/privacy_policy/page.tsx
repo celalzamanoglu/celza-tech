@@ -61,6 +61,23 @@ export default function VocaPrivacyPolicyPage() {
           </section>
 
           <section>
+            <h2 className="text-lg font-semibold mt-8 mb-3">Payments and Subscriptions</h2>
+            <p className="text-base leading-relaxed text-foreground/90">
+              If you subscribe to Voca Pro, payment is processed by Apple through the App Store.
+              We do not collect or have access to your payment information. Apple&apos;s privacy
+              practices apply to these transactions. You can review Apple&apos;s privacy policy at{" "}
+              <a
+                href="https://www.apple.com/legal/privacy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-600 dark:text-cyan-400 hover:underline"
+              >
+                https://www.apple.com/legal/privacy/
+              </a>
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-lg font-semibold mt-8 mb-3">Changes to this policy</h2>
             <p className="text-base leading-relaxed text-foreground/90">
               If we update this privacy policy, we will change the &quot;Last updated&quot; date
